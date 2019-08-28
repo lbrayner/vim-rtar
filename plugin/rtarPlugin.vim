@@ -1,14 +1,14 @@
-" tarPlugin.vim -- a Vim plugin for browsing tarfiles
-" Original was copyright (c) 2002, Michael C. Toren <mct@toren.net>
-" Modified by Charles E. Campbell
-" Distributed under the GNU General Public License.
+" Maintainer: lbrayner (https://github.com/lbrayner)
+
+" Based on tarPlugin.vim v29
+
+" Original header by Charles E. Campbell
 "
-" Updates are available from <http://michael.toren.net/code/>.  If you
-" find this script useful, or have suggestions for improvements, please
-" let me know.
-" Also look there for further comments and documentation.
+"" tarPlugin.vim -- a Vim plugin for browsing tarfiles
+"" Original was copyright (c) 2002, Michael C. Toren <mct@toren.net>
+"" Modified by Charles E. Campbell
+"" Distributed under the GNU General Public License.
 "
-" This part only sets the autocommands.  The functions are in autoload/tar.vim.
 " ---------------------------------------------------------------------
 "  Load Once: {{{1
 if &cp || exists("g:loaded_tarPlugin")

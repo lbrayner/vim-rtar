@@ -1,22 +1,20 @@
-" tar.vim: Handles browsing tarfiles
-"            AUTOLOAD PORTION
-" Date:			Apr 17, 2013
-" Version:		29
-" Maintainer:	Charles E Campbell <NdrOchip@ScampbellPfamily.AbizM-NOSPAM>
-" License:		Vim License  (see vim's :help license)
+" Maintainer: lbrayner (https://github.com/lbrayner)
+" License:    Vim License  (see vim's :help license)
+
+" Based on tarPlugin.vim v29 by Charles E. Campbell
 "
-"	Contains many ideas from Michael Toren's <tar.vim>
+" Copyright notice by Charles E. Campbell
 "
-" Copyright:    Copyright (C) 2005-2011 Charles E. Campbell {{{1
-"               Permission is hereby granted to use and distribute this code,
-"               with or without modifications, provided that this copyright
-"               notice is copied with it. Like anything else that's free,
-"               tar.vim and tarPlugin.vim are provided *as is* and comes
-"               with no warranty of any kind, either expressed or implied.
-"               By using this plugin, you agree that in no event will the
-"               copyright holder be liable for any damages resulting from
-"               the use of this software.
-"     call inputsave()|call input("Press <cr> to continue")|call inputrestore()
+"" Copyright:    Copyright (C) 2005-2011 Charles E. Campbell {{{1
+""               Permission is hereby granted to use and distribute this code,
+""               with or without modifications, provided that this copyright
+""               notice is copied with it. Like anything else that's free,
+""               tar.vim and tarPlugin.vim are provided *as is* and comes
+""               with no warranty of any kind, either expressed or implied.
+""               By using this plugin, you agree that in no event will the
+""               copyright holder be liable for any damages resulting from
+""               the use of this software.
+""     call inputsave()|call input("Press <cr> to continue")|call inputrestore()
 " ---------------------------------------------------------------------
 " Load Once: {{{1
 if &cp || exists("g:loaded_tar")
