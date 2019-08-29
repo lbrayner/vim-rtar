@@ -49,6 +49,6 @@ com! -nargs=? -complete=file Vimuntar call tar#Vimuntar(<q-args>)
 
 " ---------------------------------------------------------------------
 " Restoration And Modelines: {{{1
-" vim: fdm=marker
+" vim:shiftwidth=2 foldmethod=marker
 let &cpo= s:keepcpo
 unlet s:keepcpo

@@ -652,4 +652,4 @@ endfunc
 " Modelines And Restoration: {{{1
 let &cpo= s:keepcpo
 unlet s:keepcpo
-" vim:ts=8 fdm=marker
+" vim:shiftwidth=2 foldmethod=marker
