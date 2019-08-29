@@ -22,30 +22,30 @@ set cpo&vim
 "  Public Interface: {{{1
 augroup tar
   au!
-  au BufReadCmd   tarfile::*	call tar#Read(expand("<amatch>"), 1)
-  au FileReadCmd  tarfile::*	call tar#Read(expand("<amatch>"), 0)
-  au BufWriteCmd  tarfile::*	call tar#Write(expand("<amatch>"))
-  au FileWriteCmd tarfile::*	call tar#Write(expand("<amatch>"))
+  au BufReadCmd   tarfile::*	call rtar#Read(expand("<amatch>"), 1)
+  au FileReadCmd  tarfile::*	call rtar#Read(expand("<amatch>"), 0)
+  au BufWriteCmd  tarfile::*	call rtar#Write(expand("<amatch>"))
+  au FileWriteCmd tarfile::*	call rtar#Write(expand("<amatch>"))
 
   if has("unix")
-   au BufReadCmd   tarfile::*/*	call tar#Read(expand("<amatch>"), 1)
-   au FileReadCmd  tarfile::*/*	call tar#Read(expand("<amatch>"), 0)
-   au BufWriteCmd  tarfile::*/*	call tar#Write(expand("<amatch>"))
-   au FileWriteCmd tarfile::*/*	call tar#Write(expand("<amatch>"))
+   au BufReadCmd   tarfile::*/*	call rtar#Read(expand("<amatch>"), 1)
+   au FileReadCmd  tarfile::*/*	call rtar#Read(expand("<amatch>"), 0)
+   au BufWriteCmd  tarfile::*/*	call rtar#Write(expand("<amatch>"))
+   au FileWriteCmd tarfile::*/*	call rtar#Write(expand("<amatch>"))
   endif
 
-  au BufReadCmd   *.tar.gz		call tar#Browse(expand("<amatch>"))
-  au BufReadCmd   *.tar			call tar#Browse(expand("<amatch>"))
-  au BufReadCmd   *.lrp			call tar#Browse(expand("<amatch>"))
-  au BufReadCmd   *.tar.bz2		call tar#Browse(expand("<amatch>"))
-  au BufReadCmd   *.tar.Z		call tar#Browse(expand("<amatch>"))
-  au BufReadCmd   *.tgz			call tar#Browse(expand("<amatch>"))
-  au BufReadCmd   *.tbz			call tar#Browse(expand("<amatch>"))
-  au BufReadCmd   *.tar.lzma	call tar#Browse(expand("<amatch>"))
-  au BufReadCmd   *.tar.xz		call tar#Browse(expand("<amatch>"))
-  au BufReadCmd   *.txz			call tar#Browse(expand("<amatch>"))
+  au BufReadCmd   *.tar.gz		call rtar#Browse(expand("<amatch>"))
+  au BufReadCmd   *.tar			call rtar#Browse(expand("<amatch>"))
+  au BufReadCmd   *.lrp			call rtar#Browse(expand("<amatch>"))
+  au BufReadCmd   *.tar.bz2		call rtar#Browse(expand("<amatch>"))
+  au BufReadCmd   *.tar.Z		call rtar#Browse(expand("<amatch>"))
+  au BufReadCmd   *.tgz			call rtar#Browse(expand("<amatch>"))
+  au BufReadCmd   *.tbz			call rtar#Browse(expand("<amatch>"))
+  au BufReadCmd   *.tar.lzma	call rtar#Browse(expand("<amatch>"))
+  au BufReadCmd   *.tar.xz		call rtar#Browse(expand("<amatch>"))
+  au BufReadCmd   *.txz			call rtar#Browse(expand("<amatch>"))
 augroup END
-com! -nargs=? -complete=file Vimuntar call tar#Vimuntar(<q-args>)
+com! -nargs=? -complete=file Vimuntar call rtar#Vimuntar(<q-args>)
 
 " ---------------------------------------------------------------------
 " Restoration And Modelines: {{{1
