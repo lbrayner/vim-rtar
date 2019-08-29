@@ -5,7 +5,7 @@
 "
 " Copyright notice by Charles E. Campbell
 "
-"" Copyright:    Copyright (C) 2005-2011 Charles E. Campbell {{{1
+""               Copyright (C) 2005-2011 Charles E. Campbell {{{1
 ""               Permission is hereby granted to use and distribute this code,
 ""               with or without modifications, provided that this copyright
 ""               notice is copied with it. Like anything else that's free,
