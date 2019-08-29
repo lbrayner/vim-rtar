@@ -429,7 +429,7 @@ fun! tar#Write(fname)
   else
 
 "   call Decho("tarfile<".tarfile."> fname<".fname.">")
- 
+
    if fname =~ '/'
     let dirpath = substitute(fname,'/[^/]\+$','','e')
     if has("win32unix") && executable("cygpath")
@@ -445,7 +445,7 @@ fun! tar#Write(fname)
     let tarfile = substitute(tarfile, '-', './-', '')
    endif
 "   call Decho("tarfile<".tarfile."> fname<".fname.">")
- 
+
    if exists("g:tar_secure")
     let tar_secure= " -- "
    else
@@ -455,7 +455,7 @@ fun! tar#Write(fname)
    if has("win32unix") && executable("cygpath")
     let tarfile = substitute(system("cygpath ".shellescape(tarfile,0)),'\n','','e')
    endif
- 
+
    " delete old file from tarfile
 "   call Decho("system(".g:tar_cmd." --delete -f ".shellescape(tarfile,0)." -- ".shellescape(fname,0).")")
    call system(g:tar_cmd." --delete -f ".shellescape(tarfile,0).tar_secure.shellescape(fname,0))
@@ -463,8 +463,8 @@ fun! tar#Write(fname)
     redraw!
     echohl Error | echo "***error*** (tar#Write) sorry, unable to update ".fnameescape(tarfile)." with ".fnameescape(fname) | echohl None
    else
- 
-    " update tarfile with new file 
+
+    " update tarfile with new file
 "    call Decho(g:tar_cmd." -".g:tar_writeoptions." ".shellescape(tarfile,0).tar_secure.shellescape(fname,0))
     call system(g:tar_cmd." -".g:tar_writeoptions." ".shellescape(tarfile,0).tar_secure.shellescape(fname,0))
     if v:shell_error != 0
@@ -496,7 +496,7 @@ fun! tar#Write(fname)
     unlet s:tblfile_{winnr()}
    endif
   endif
-  
+
   " cleanup and restore current directory
   cd ..
   call s:Rmdir("_ZIPVIM_")
