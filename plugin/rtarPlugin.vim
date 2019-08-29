@@ -11,10 +11,10 @@
 "
 " ---------------------------------------------------------------------
 "  Load Once: {{{1
-if &cp || exists("g:loaded_tarPlugin")
+if &cp || exists("g:loaded_rtarPlugin")
  finish
 endif
-let g:loaded_tarPlugin = "v29"
+let g:loaded_rtarPlugin = "r29"
 let s:keepcpo          = &cpo
 set cpo&vim
 

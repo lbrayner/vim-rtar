@@ -17,10 +17,10 @@
 ""     call inputsave()|call input("Press <cr> to continue")|call inputrestore()
 " ---------------------------------------------------------------------
 " Load Once: {{{1
-if &cp || exists("g:loaded_tar")
+if &cp || exists("g:loaded_rtar")
  finish
 endif
-let g:loaded_tar= "v29"
+let g:loaded_rtar= "r29"
 if v:version < 702
  echohl WarningMsg
  echo "***warning*** this version of tar needs vim 7.2"
@@ -138,7 +138,7 @@ fun! tar#Browse(tarfile)
   " give header
 "  call Decho("printing header")
   let lastline= line("$")
-  call setline(lastline+1,'" tar.vim version '.g:loaded_tar)
+  call setline(lastline+1,'" tar.vim version '.g:loaded_rtar)
   call setline(lastline+2,'" Browsing tarfile '.a:tarfile)
   call setline(lastline+3,'" Select a file with cursor and press ENTER')
   keepj $put =''
